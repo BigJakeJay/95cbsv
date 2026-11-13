@@ -1,0 +1,31 @@
+{
+  "spider": "./HeChengChaXiu.jar",
+  "sites": [
+    {
+      "key": "95cbsv",
+      "name": "95cbsv",
+      "type": 3,
+      "api": "csp_XBPQ",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "ext": {
+        "站名": "95cbsv",
+        "主页url": "https://www.95cbsv.com/",
+        "分类": "无码素人$26#日本无码$84#无码破解$22#日韩中字$25#欧美劲爆$19#经典三级$28#3D动漫$20#自拍国产$1#家庭乱伦$4#少女萝莉$3#熟女少妇$5#酒店探花$7#偷拍盗摄$8#醉酒迷奸$37#综合强片$90#吃瓜黑料$38#直播裸聊$2#巨乳诱惑$76#户外野战$36#AI换脸$23#群P换妻$73#网黄博主$57#黑人媚黑$56",
+        "分类url": "https://www.95cbsv.com/htms/list{cateId}/{catePg}.htm",
+        "搜索模式": "1",
+        "搜索url": "https://www.95cbsv.com/list.jsp?s={wd}",
+        "数组": "video-listing&&</div>",
+        "图片": "data-src=\"&&\"",
+        "链接": "href=\"&&\"",
+        "搜索数组": "video-listing&&</div>",
+        "搜索链接": "href=\"&&\"",
+        "嗅探词": ".m3u8#.mp4",
+        "线路数组": "",
+        "播放数组": "",
+        "播放链接": ""
+      }
+    }
+  ]
+}

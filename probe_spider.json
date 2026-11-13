@@ -1,0 +1,15 @@
+{
+  "spider": "https://raw.githubusercontent.com/yw88075/tvbox/main/HeChengChaXiu.jar",
+  "sites": [
+    {
+      "key": "drpy_js_95cbsv_probe_spider",
+      "name": "95cbsv JS加载诊断（含Spider）",
+      "type": 3,
+      "api": "https://raw.githubusercontent.com/yw88075/tvbox/main/dr/lib/drpy2.min.js",
+      "ext": "https://raw.githubusercontent.com/BigJakeJay/95cbsv/main/probe.js",
+      "searchable": 0,
+      "quickSearch": 0,
+      "filterable": 0
+    }
+  ]
+}

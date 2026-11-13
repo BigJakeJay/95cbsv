@@ -15,29 +15,29 @@ function _95decode(s) {
 function _95title(card) {
   var m = String(card).match(/decodeURIComponent\s*\(\s*(['"])((?:\\.|(?!\1)[\s\S])*)\1/);
   if (m) return _95decode(m[2]);
-  try { return String(jsp.pdfh(card, "h4.av_data_title&&Text") || "").trim(); }
+  try { return String(pdfh(card, "h4.av_data_title&&Text") || "").trim(); }
   catch (e) { return ""; }
 }
 function _95cards(pageHtml) {
-  var cards = jsp.pdfa(pageHtml, ".video-listing") || [];
+  var cards = pdfa(pageHtml, ".video-listing") || [];
   var out = [];
   cards.forEach(function(card) {
     var raw = String(card), href = "";
     var hm = raw.match(/href\s*=\s*["']([^"']*\/htm\/play\d+\/[^"'#?]+\.htm(?:\?[^"']*)?)["']/i);
     if (hm) href = hm[1];
     if (!href) {
-      try { href = jsp.pdfh(card, "a[href*='/htm/play']&&href") || ""; } catch (e) {}
+      try { href = pdfh(card, "a[href*='/htm/play']&&href") || ""; } catch (e) {}
     }
     if (!href) return;
     var name = _95title(raw), pic = "", remark = "";
     if (!name) {
-      try { name = jsp.pdfh(card, "h4.av_data_title&&Text") || ""; } catch (e) {}
+      try { name = pdfh(card, "h4.av_data_title&&Text") || ""; } catch (e) {}
     }
     try {
-      pic = jsp.pdfh(card, "img&&data-src") || jsp.pdfh(card, "img&&data-original") || jsp.pdfh(card, "img&&src") || "";
-      remark = jsp.pdfh(card, ".ico-time&&Text") || jsp.pdfh(card, ".video-date&&Text") || "";
+      pic = pdfh(card, "img&&data-src") || pdfh(card, "img&&data-original") || pdfh(card, "img&&src") || "";
+      remark = pdfh(card, ".ico-time&&Text") || pdfh(card, ".video-date&&Text") || "";
     } catch (e) {}
-    out.push({title:String(name || "未识别标题").trim(),img:_95abs(pic),desc:String(remark || "").trim(),url:_95abs(href)});
+    out.push({vod_name:String(name || "未识别标题").trim(),vod_pic:_95abs(pic),vod_remarks:String(remark || "").trim(),vod_id:_95abs(href)});
   });
   return out;
 }
